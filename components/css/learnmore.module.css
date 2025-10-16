@@ -1,0 +1,86 @@
+.outerContainer {
+  width: 100%;
+  height: auto;
+  background-color: #f5f5f5;
+  padding: 50px 0;
+}
+.innerContainerA {
+  display: flex;
+  justify-content: center;
+}
+.threecolWrap {
+  display: flex;
+  flex-direction: row;
+  width: 60rem;
+  justify-content: space-between;
+}
+.threecolItem {
+  width: 19rem;
+  height: 19rem;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: aqua;
+  position: relative;
+  display: flex;
+  align-items: end;
+}
+
+.threecolItem .tint {
+  position: absolute;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 20%,
+    rgba(28, 28, 28, 1) 100%
+  );
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.threecolItem img {
+  object-fit: cover;
+  position: relative !important;
+  z-index: 1;
+}
+.threecolItem .itemTitleWrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: auto;
+  bottom: 0;
+  padding: 20px;
+}
+.threecolItem h1 {
+  font-family: var(--font-staatliches);
+  font-weight: 400;
+  padding-right: 10px;
+}
+.itemTitleWrap img {
+  height: 30px !important;
+  width: 30px !important;
+  object-fit: contain;
+}
+.innerContainerB {
+  display: flex;
+  justify-content: center;
+  padding-top: 150px;
+  padding-bottom: 20px;
+}
+.btn {
+  padding: 7px 25px;
+  color: #f5f5f5;
+  background-color: #317b22;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 20px;
+  cursor: pointer;
+  border: solid 2px #317b22;
+  transition: all ease-in-out 0.25s;
+}
+.btn:hover {
+  background-color: #f5f5f5;
+  color: #317b22;
+}

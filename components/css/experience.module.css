@@ -1,0 +1,39 @@
+.outerContainer {
+  width: 100%;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+.innerContainer {
+  width: 60rem;
+  height: 17rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 30px 0;
+}
+.imageWrap img {
+  width: 22rem !important;
+  height: auto !important;
+  position: relative !important;
+  mix-blend-mode: multiply;
+}
+
+.textWrap {
+  color: #1c1c1c;
+  width: 50rem;
+  display: flex;
+  flex-direction: column;
+}
+.textWrap .titleWrap {
+  width: 35rem;
+  padding-bottom: 10px;
+}
+.textWrap h1 {
+  font-family: var(--font-staatliches);
+  font-weight: 400;
+}
+.textWrap .descWrap {
+  width: 30rem;
+}

@@ -1,0 +1,33 @@
+.outerContainer {
+  background-color: #074257;
+  display: flex;
+  justify-content: center;
+}
+.innerContainer {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 40px 0 20px 0;
+  font-size: 12px;
+}
+.doubleColumn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 0 40px 0;
+  width: 38rem;
+}
+.textContainer p {
+  font-family: var(--font-staatliches);
+  font-size: 31px;
+  margin-left: 40px;
+}
+.linkContainer:hover a {
+  color: #4a8841;
+}
