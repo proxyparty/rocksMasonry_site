@@ -8,11 +8,11 @@ export default function Footer() {
       <div className={styles.innerContainer}>
         <div className={styles.links}>
           <div className={styles.linkContainer}>
-            <Link href="/services">Services</Link>
+            <Link href="/our-services">Services</Link>
             <div className={styles.linkUnderline}></div>
           </div>
           <div className={styles.linkContainer}>
-            <Link href="/work">Our Work</Link>
+            <Link href="/our-work">Our Work</Link>
             <div className={styles.linkUnderline}></div>
           </div>
           <div className={styles.linkContainer}>

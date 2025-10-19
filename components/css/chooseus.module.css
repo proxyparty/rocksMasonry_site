@@ -22,9 +22,11 @@
 .titleContainer {
   color: var(--off-black);
   font-family: var(--font-staatliches);
-  font-weight: 400;
   display: flex;
   justify-content: center;
+}
+.titleContainer h1 {
+  font-weight: 400;
 }
 
 .badgeContainer {

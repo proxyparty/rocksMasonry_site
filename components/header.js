@@ -17,15 +17,15 @@ export default function Header() {
         </Link>
         <div className={styles.links}>
           <div className={styles.linkContainer}>
-            <Link href="/services">Services</Link>
+            <Link href="/our-services">Services</Link>
             <div className={styles.linkUnderline}></div>
           </div>
           <div className={styles.linkContainer}>
-            <Link href="/work">Our Work</Link>
+            <Link href="/our-work">Our Work</Link>
             <div className={styles.linkUnderline}></div>
           </div>
           <div className={styles.linkContainer}>
-            <Link href="/about">About Us</Link>
+            <Link href="/about-us">About Us</Link>
             <div className={styles.linkUnderline}></div>
           </div>
           <Link className={styles.btn} href="#">

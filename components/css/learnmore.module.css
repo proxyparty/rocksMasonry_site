@@ -23,6 +23,8 @@
   position: relative;
   display: flex;
   align-items: end;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
 }
 
 .threecolItem .tint {
@@ -41,6 +43,10 @@
   object-fit: cover;
   position: relative !important;
   z-index: 1;
+  transition: all ease-in-out 0.2s;
+}
+.threecolItem:hover > img {
+  transform: scale(1.5);
 }
 .threecolItem .itemTitleWrap {
   display: flex;
@@ -62,6 +68,9 @@
   height: 30px !important;
   width: 30px !important;
   object-fit: contain;
+}
+.threecolItem:hover .itemTitleWrap img {
+  margin-left: 10px;
 }
 .innerContainerB {
   display: flex;

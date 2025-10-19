@@ -66,7 +66,7 @@ export default function ChooseUs() {
           <div className={styles.badge2Col}>
             <div className={styles.badgeImage}>
               <Image
-                src="/modernEquipment_icon.png"
+                src="/residential_icon.png"
                 alt="logo"
                 layout="fill"
                 objectFit="contain"
@@ -82,7 +82,7 @@ export default function ChooseUs() {
           <div className={styles.badge2Col}>
             <div className={styles.badgeImage}>
               <Image
-                src="/modernEquipment_icon.png"
+                src="/reliable_icon.png"
                 alt="logo"
                 layout="fill"
                 objectFit="contain"
@@ -98,7 +98,7 @@ export default function ChooseUs() {
           <div className={styles.badge2Col}>
             <div className={styles.badgeImage}>
               <Image
-                src="/modernEquipment_icon.png"
+                src="/estimates_icon.png"
                 alt="logo"
                 layout="fill"
                 objectFit="contain"

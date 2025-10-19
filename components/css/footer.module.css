@@ -6,14 +6,14 @@
 .innerContainer {
   display: flex;
   flex-direction: column;
-  width: 500px;
+  width: auto;
 }
 .links {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   padding: 40px 0 20px 0;
-  font-size: 12px;
+  font-size: 16px;
 }
 .doubleColumn {
   display: flex;
@@ -27,6 +27,9 @@
   font-family: var(--font-staatliches);
   font-size: 31px;
   margin-left: 40px;
+}
+.linkContainer a {
+  transition: all ease-in-out 0.2s;
 }
 .linkContainer:hover a {
   color: #4a8841;

@@ -52,7 +52,11 @@
 .tint {
   width: 1000px;
   height: 500px;
-  background-color: black;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 25%,
+    rgba(252, 252, 252, 0) 100%
+  );
   border-radius: 25px;
   overflow: hidden;
   opacity: 50%;

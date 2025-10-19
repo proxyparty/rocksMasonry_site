@@ -42,11 +42,11 @@ export default function Hero() {
             <Image src="/fully_capable_icon.png" alt="logo" layout="fill" />
           </div>
           <div className={styles.textWrap}>
-            <h1 className={styles.title}>Environmental</h1>
+            <h1 className={styles.title}>Fully Capable</h1>
             <p className={styles.desc}>
-              At Rocks Masonry, we’re committed to the environment by using
-              energy-efficient equipment and recycling materials from our job
-              sites.
+              We handle all excavation needs, including new pool digs, pool
+              demolition and removal, stock pond construction, and basement
+              excavation.
             </p>
           </div>
         </div>
