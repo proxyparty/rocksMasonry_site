@@ -11,16 +11,19 @@
   height: auto;
   background-color: var(--off-white);
   padding: 5rem 0;
+  display: flex;
+  justify-content: center;
 }
 .twoColumn {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  width: 1192px;
 }
 .twoColumn .columnImage {
-  width: 25rem;
-  height: 25rem;
+  width: 35rem;
+  height: 35rem;
   position: relative;
   border-radius: 25px;
   overflow: hidden;
@@ -36,15 +39,17 @@
   font-family: var(--font-staatliches);
   font-weight: 400;
   padding-bottom: 10px;
+  font-size: 40px;
 }
 .twoColumn p {
   color: var(--off-black);
   font-family: var(--font-roboto);
   font-weight: 400;
   height: auto;
-  width: 396px;
+  width: 500px;
   line-height: 25px;
   padding-bottom: 10px;
+  font-size: 20px;
 }
 .twoColumn .ctaContainer {
   display: flex;
@@ -59,4 +64,76 @@
 }
 .twoColumn .ctaContainer b {
   color: var(--off-black);
+  font-size: 20px;
+}
+
+/* MEDIA QUERIES */
+
+/* 1260px or less */
+@media screen and (width <= 1260px) {
+  .twoColumn {
+    width: 1000px;
+  }
+  .twoColumn .columnImage {
+    width: 27rem;
+    height: 27rem;
+  }
+}
+/* 1040px or less */
+@media screen and (width <= 1040px) {
+  .twoColumn {
+    width: 800px;
+  }
+  .twoColumn .columnImage {
+    width: 19rem;
+    height: 19rem;
+  }
+  .columnText {
+    width: 445px;
+  }
+  .columnText h1 {
+    font-size: 30px;
+  }
+  .columnText p {
+    font-size: 15px;
+    width: 100%;
+  }
+  .twoColumn .ctaContainer b {
+    font-size: 15px;
+  }
+}
+/* 830px or less */
+@media screen and (width <= 830px) {
+  .twoColumn {
+    display: flex;
+    flex-direction: column;
+  }
+  .twoColumn .columnText {
+    padding-left: 0;
+    text-align: center;
+  }
+  .twoColumn .columnImage {
+    margin-bottom: 20px;
+  }
+  .ctaContainer {
+    justify-content: center;
+  }
+}
+/* 640px or less */
+@media screen and (width <= 640px) {
+}
+
+/* 495px or less */
+@media screen and (width <= 490px) {
+  .columnText {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .columnText p {
+    font-size: 13px;
+    width: 80%;
+  }
 }

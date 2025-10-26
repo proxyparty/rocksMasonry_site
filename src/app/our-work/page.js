@@ -13,76 +13,35 @@ export default function OurWork() {
             <Image src="/our_work_image.png" alt="logo" layout="fill" />
           </div>
         </div>
-        <div className={styles.innerContainerB}>
-          <h2 className={styles.sectionTitle}>Before & After</h2>
-          <div className={styles.threeCol}>
-            <div className={`${styles.imageContainer} ${styles.before}`}>
-              <Image
-                src="/personal_services_image.png"
-                alt="logo"
-                layout="fill"
-              />
-            </div>
-            <div className={styles.arrowIconContainer}>
-              <Image src="/green_arrow_right.png" alt="logo" layout="fill" />
-            </div>
-            <div className={`${styles.imageContainer} ${styles.after}`}>
-              <Image
-                src="/personal_services_image.png"
-                alt="logo"
-                layout="fill"
-              />
-            </div>
-          </div>
-          <div className={styles.threeCol}>
-            <div className={`${styles.imageContainer} ${styles.before}`}>
-              <Image
-                src="/personal_services_image.png"
-                alt="logo"
-                layout="fill"
-              />
-            </div>
-            <div className={styles.arrowIconContainer}>
-              <Image src="/green_arrow_right.png" alt="logo" layout="fill" />
-            </div>
-            <div className={`${styles.imageContainer} ${styles.after}`}>
-              <Image
-                src="/personal_services_image.png"
-                alt="logo"
-                layout="fill"
-              />
-            </div>
-          </div>
-        </div>
         <div className={styles.innerContainerC}>
           <h2 className={styles.sectionTitle}>Gallery</h2>
           <div className={styles.galleryContainer}>
             <div className={styles.galleryImage}>
-              <Image src="/land_clearing_image.png" alt="logo" layout="fill" />
+              <Image src="/work_gallery1_image.png" alt="logo" layout="fill" />
             </div>
             <div className={styles.galleryImage}>
-              <Image src="/land_clearing_image.png" alt="logo" layout="fill" />
+              <Image src="/work_gallery2_image.png" alt="logo" layout="fill" />
             </div>
             <div className={styles.galleryImage}>
-              <Image src="/land_clearing_image.png" alt="logo" layout="fill" />
+              <Image src="/work_gallery3_image.png" alt="logo" layout="fill" />
             </div>
             <div className={styles.galleryImage}>
-              <Image src="/land_clearing_image.png" alt="logo" layout="fill" />
+              <Image src="/work_gallery4_image.png" alt="logo" layout="fill" />
             </div>
             <div className={styles.galleryImage}>
-              <Image src="/land_clearing_image.png" alt="logo" layout="fill" />
+              <Image src="/work_gallery5_image.png" alt="logo" layout="fill" />
             </div>
             <div className={styles.galleryImage}>
-              <Image src="/land_clearing_image.png" alt="logo" layout="fill" />
+              <Image src="/work_gallery6_image.png" alt="logo" layout="fill" />
             </div>
             <div className={styles.galleryImage}>
-              <Image src="/land_clearing_image.png" alt="logo" layout="fill" />
+              <Image src="/work_gallery7_image.png" alt="logo" layout="fill" />
             </div>
             <div className={styles.galleryImage}>
-              <Image src="/land_clearing_image.png" alt="logo" layout="fill" />
+              <Image src="/work_gallery8_image.png" alt="logo" layout="fill" />
             </div>
             <div className={styles.galleryImage}>
-              <Image src="/land_clearing_image.png" alt="logo" layout="fill" />
+              <Image src="/work_gallery9_image.png" alt="logo" layout="fill" />
             </div>
           </div>
         </div>

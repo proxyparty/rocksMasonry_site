@@ -24,9 +24,11 @@
   font-family: var(--font-staatliches);
   display: flex;
   justify-content: center;
+  padding-bottom: 25px;
 }
 .titleContainer h1 {
   font-weight: 400;
+  font-size: 40px;
 }
 
 .badgeContainer {
@@ -42,7 +44,7 @@
   height: 100%;
   align-items: center;
   justify-content: center;
-  padding: 15px 0;
+  padding: 20px 0;
 }
 
 .badgeImage {
@@ -59,26 +61,30 @@
   color: var(--off-black);
   font-family: var(--font-staatliches);
   font-weight: 400;
+  font-size: 30px;
 }
 .badgeContainer p {
   color: var(--off-black);
   font-family: var(--font-roboto);
   font-weight: 400;
-  width: 245px;
+  width: 300px;
+  font-size: 20px;
 }
 .countyContainer {
   display: flex;
   flex-direction: row;
   padding: 50px 0 0 0;
+  width: 1192px;
 }
 .countyText {
-  width: 35rem;
+  width: auto;
   padding-top: 45px;
 }
 .countyContainer h1 {
   color: var(--off-black);
   font-family: var(--font-staatliches);
   font-weight: 400;
+  font-size: 40px;
 }
 .countyContainer p {
   color: var(--off-black);
@@ -87,7 +93,106 @@
   width: 26rem;
 }
 .countyContainer .countyImage {
-  width: 30rem;
+  width: 35rem;
   height: 15rem;
   position: relative;
+}
+
+/* MEDIA QUERIES */
+
+/* 1260px or less */
+@media screen and (width <= 1260px) {
+  .countyContainer {
+    width: 1000px;
+  }
+}
+/* 1040px or less */
+@media screen and (width <= 1040px) {
+  .titleContainer h1 {
+    font-size: 30px;
+  }
+  .badgeText h2 {
+    font-size: 20px;
+  }
+  .innerContainer {
+    width: 50rem;
+  }
+  .badgeContainer p {
+    font-size: 15px;
+  }
+  .countyContainer {
+    flex-direction: column;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* 830px or less */
+@media screen and (width <= 830px) {
+  .titleContainer h1 {
+    font-size: 23px;
+  }
+  .badgeContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .badge2Col {
+    flex-direction: column;
+  }
+  .badgeText {
+    text-align: center;
+  }
+}
+/* 640px or less */
+@media screen and (width <= 640px) {
+  .countyContainer {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .countyContainer .countyImage {
+    width: 100%;
+  }
+  .countyImage img {
+    position: relative;
+    width: 60%;
+    height: auto;
+  }
+  .countyText h1 {
+    font-size: 30px;
+  }
+  .countyText p {
+    font-size: 15px;
+  }
+}
+
+/* 495px or less */
+@media screen and (width <= 490px) {
+  .innerContainer {
+    width: 100%;
+  }
+  .titleContainer {
+    width: 100%;
+    text-align: center;
+  }
+  .countyContainer {
+    width: 100%;
+  }
+  .countyText {
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .countyText h1 {
+    font-size: 25px;
+  }
+  .countyText p {
+    width: 90%;
+    font-size: 11px;
+  }
 }

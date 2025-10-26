@@ -23,7 +23,9 @@ export default function Estimate() {
             <div className={styles.ctaIcon}>
               <Image src="/phone_icon.png" alt="logo" layout="fill" />
             </div>
-            <b>631-445-1231</b>
+            <Link href={"tel:+6314451231"}>
+              <b>631-445-1231</b>
+            </Link>
           </div>
         </div>
       </div>

@@ -6,15 +6,15 @@
   padding: 50px 0;
 }
 .innerContainer {
-  width: 60rem;
-  height: 17rem;
+  width: 1192px;
+  height: auto;
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 30px 0;
 }
 .imageWrap img {
-  width: 22rem !important;
+  width: 25rem !important;
   height: auto !important;
   position: relative !important;
   mix-blend-mode: multiply;
@@ -27,13 +27,109 @@
   flex-direction: column;
 }
 .textWrap .titleWrap {
-  width: 35rem;
   padding-bottom: 10px;
+  width: 41rem;
 }
 .textWrap h1 {
   font-family: var(--font-staatliches);
   font-weight: 400;
+  font-size: 40px;
 }
 .textWrap .descWrap {
-  width: 30rem;
+  width: 38rem;
+}
+.textWrap .descWrap p {
+  font-size: 20px;
+}
+
+/* MEDIA QUERIES */
+
+/* 1260px or less */
+@media screen and (width <= 1260px) {
+  .innerContainer {
+    width: 1000px;
+  }
+  .imageWrap img {
+    width: 20rem !important;
+  }
+  .textWrap .titleWrap {
+    width: 31rem;
+  }
+  .titleWrap h1 {
+    font-size: 30px;
+  }
+  .textWrap .descWrap p {
+    font-size: 15px;
+  }
+}
+/* 1040px or less */
+@media screen and (width <= 1040px) {
+  .innerContainer {
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+  .textWrap {
+    align-items: center;
+    width: 100%;
+  }
+  .textWrap p {
+    width: 80%;
+  }
+  .descWrap {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+}
+/* 830px or less */
+@media screen and (width <= 830px) {
+  .innerContainer {
+    width: 100%;
+  }
+  .imageWrap {
+    width: 100%;
+    display: contents;
+  }
+  .imageWrap img {
+    width: 60% !important;
+  }
+  .textWrap {
+    align-items: center;
+    width: 100%;
+  }
+  .textWrap p {
+    width: 80%;
+  }
+  .descWrap {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+}
+/* 640px or less */
+@media screen and (width <= 640px) {
+  .outerContainer {
+    padding: 0;
+  }
+  .textWrap .titleWrap {
+    width: 100%;
+    display: flex;
+    text-align: center;
+  }
+  .titleWrap h1 {
+    font-size: 25px;
+    position: relative;
+  }
+  .textWrap .descWrap {
+    width: 100%;
+  }
+  .textWrap .descWrap p {
+    font-size: 12px;
+  }
+}
+
+/* 495px or less */
+@media screen and (width <= 490px) {
 }

@@ -8,19 +8,17 @@ export default function Footer() {
       <div className={styles.innerContainer}>
         <div className={styles.links}>
           <div className={styles.linkContainer}>
-            <Link href="/our-services">Services</Link>
-            <div className={styles.linkUnderline}></div>
-          </div>
-          <div className={styles.linkContainer}>
             <Link href="/our-work">Our Work</Link>
             <div className={styles.linkUnderline}></div>
           </div>
           <div className={styles.linkContainer}>
-            <Link href="/about">About Us</Link>
+            <Link href="/about-us">About Us</Link>
             <div className={styles.linkUnderline}></div>
           </div>
           <div className={styles.linkContainer}>
-            <Link href="#">Contact Us</Link>
+            <Link href="https://share.google/VJ6kUpzMYIBS92DVg">
+              Contact Us
+            </Link>
             <div className={styles.linkUnderline}></div>
           </div>
         </div>

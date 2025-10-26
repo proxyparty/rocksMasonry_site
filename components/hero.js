@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./css/hero.module.css";
+import heroImage from "../public/hero-image.png";
 
 export default function Hero() {
   return (
@@ -16,12 +17,7 @@ export default function Hero() {
           </p>
         </div>
         <div className={styles.tint}></div>
-        <Image
-          src="/hero-image.png"
-          alt="logo"
-          layout="fill"
-          objectFit="cover"
-        />
+        <Image src={heroImage} alt="logo" objectFit="cover" fill />
       </div>
       <div className={styles.twoCol}>
         <div className={styles.col}>
