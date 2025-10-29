@@ -51,10 +51,7 @@
   height: 70px;
   width: 70px;
   position: relative;
-}
-
-.badgeImage img {
-  padding-right: 15px;
+  margin-right: 25px;
 }
 
 .badgeContainer h2 {

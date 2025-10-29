@@ -15,7 +15,10 @@ export default function Header() {
   return (
     <>
       <div className={styles.container}>
-        <div className={styles.twoColumn}>
+        <div
+          className={`${styles.twoColumn}`}
+          style={{ animationDelay: ".5s" }}
+        >
           <Link href="/" className={styles.logoContainer}>
             <Image
               className={styles.logo}

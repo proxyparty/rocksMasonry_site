@@ -62,15 +62,15 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 63rem;
+  width: 1192px;
   justify-content: space-between;
 }
 .innerContainerB .twoColumn.reverse {
   flex-direction: row-reverse;
 }
 .innerContainerB .twoColumn .columnImage {
-  width: 25rem;
-  height: 25rem;
+  width: 500px;
+  height: 500px;
   position: relative;
   border-radius: 25px;
   overflow: hidden;
@@ -90,15 +90,17 @@
   font-family: var(--font-staatliches);
   font-weight: 400;
   padding-bottom: 10px;
+  font-size: 40px;
 }
 .innerContainerB .twoColumn p {
   color: var(--off-black);
   font-family: var(--font-roboto);
   font-weight: 400;
   height: auto;
-  width: 396px;
+  width: 530px;
   line-height: 25px;
   padding-bottom: 10px;
+  font-size: 20px;
 }
 .innerContainerC {
   width: 100%;

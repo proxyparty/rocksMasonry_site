@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./css/hero.module.css";
-import heroImage from "../public/hero-image.png";
+import heroImage from "../public/masonry_img.png";
 
 export default function Hero() {
   return (
@@ -17,9 +17,15 @@ export default function Hero() {
           </p>
         </div>
         <div className={styles.tint}></div>
-        <Image src={heroImage} alt="logo" objectFit="cover" fill />
+        <Image
+          className="glbl_slowZoom_animation"
+          src={heroImage}
+          alt="logo"
+          objectFit="cover"
+          fill
+        />
       </div>
-      <div className={styles.twoCol}>
+      <div className={`${styles.twoCol}`} style={{ animationDelay: "1s" }}>
         <div className={styles.col}>
           <div className={styles.imageWrap}>
             <Image src="/environmental_icon.png" alt="logo" layout="fill" />

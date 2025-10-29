@@ -13,7 +13,7 @@
   align-items: center;
   padding: 30px 0;
 }
-.imageWrap img {
+.innerContainer .imageWrap img {
   width: 25rem !important;
   height: auto !important;
   position: relative !important;

@@ -9,7 +9,7 @@ export default function LearnMore() {
         <div className={styles.threecolWrap}>
           <Link href={"/masonry"} className={styles.threecolItem}>
             <div className={styles.tint}></div>
-            <Image src="/masonry_img.png" alt="logo" layout="fill" />
+            <Image src="/hero-image.png" alt="logo" layout="fill" />
             <div className={styles.itemTitleWrap}>
               <h1>Masonry</h1>
               <Image src="/arrow_right.png" alt="logo" layout="fill" />

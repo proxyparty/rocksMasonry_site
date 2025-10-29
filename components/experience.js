@@ -5,7 +5,10 @@ import styles from "./css/experience.module.css";
 export default function Experience() {
   return (
     <div className={styles.outerContainer}>
-      <div className={styles.innerContainer}>
+      <div
+        className={`${styles.innerContainer}`}
+        style={{ animationDelay: "1.5s" }}
+      >
         <div className={styles.textWrap}>
           <div className={styles.titleWrap}>
             <h1>

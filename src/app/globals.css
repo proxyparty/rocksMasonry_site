@@ -41,3 +41,33 @@ a {
     color-scheme: dark;
   }
 }
+
+@keyframes easeDrop {
+  from {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0%);
+    opacity: 100%;
+  }
+}
+
+@keyframes slowZoom {
+  from {
+    scale: 1;
+  }
+
+  to {
+    scale: 1.5;
+  }
+}
+
+.glbl_easeDrop_animation {
+  animation: easeDrop 1.5s 1 forwards;
+}
+
+.glbl_slowZoom_animation {
+  animation: slowZoom 10s 1 forwards;
+}

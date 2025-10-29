@@ -60,7 +60,12 @@ export default function OurWork() {
               <p>
                 Call us today for a <b>FREE</b> estimate:
               </p>
-              <div className={styles.ctaBtn}>Contact Us</div>
+              <Link
+                href="https://share.google/VJ6kUpzMYIBS92DVg"
+                className={styles.ctaBtn}
+              >
+                Contact Us
+              </Link>
             </div>
           </div>
         </div>

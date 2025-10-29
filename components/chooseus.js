@@ -14,7 +14,7 @@ export default function ChooseUs() {
           <div className={styles.badge2Col}>
             <div className={styles.badgeImage}>
               <Image
-                src="/licensed_icon.png"
+                src="/20years_icon.png"
                 alt="logo"
                 layout="fill"
                 objectFit="contain"
