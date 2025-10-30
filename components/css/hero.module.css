@@ -81,7 +81,6 @@
   border-radius: 15px;
   align-items: center;
   padding: 20px;
-  filter: drop-shadow(2px 12px 7px rgba(2, 2, 2, 0.075));
 }
 .col .imageWrap {
   display: flex;

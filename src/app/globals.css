@@ -69,5 +69,5 @@ a {
 }
 
 .glbl_slowZoom_animation {
-  animation: slowZoom 10s 1 forwards;
+  animation: slowZoom 20s 1 forwards;
 }
