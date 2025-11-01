@@ -11,7 +11,7 @@ export default function Excavation() {
             <p>Excavation</p>
             <div className={styles.tint}></div>
             <Image
-              src="/personal_services_image.png"
+              src="/dirt_removal_image.png"
               alt="logo"
               sizes="100vw"
               layout="fill"
@@ -21,7 +21,11 @@ export default function Excavation() {
         <div className={styles.innerContainerB}>
           <div className={styles.twoColumn}>
             <div className={styles.columnImage}>
-              <Image src="/pool_removal_image.jpg" alt="logo" layout="fill" />
+              <Image
+                src="/excavation_estimate_image.png"
+                alt="logo"
+                layout="fill"
+              />
             </div>
             <div className={styles.columnText}>
               <h1>Swimming Pool Demolition & Removal</h1>
@@ -95,11 +99,7 @@ export default function Excavation() {
         <div className={styles.innerContainerC}>
           <div className={styles.twoColumn}>
             <div className={styles.columnImage}>
-              <Image
-                src="/excavation_estimate_image.png"
-                alt="logo"
-                layout="fill"
-              />
+              <Image src="/pool_removal_image.jpg" alt="logo" layout="fill" />
             </div>
             <div className={styles.columnText}>
               <h1>Get Your Estimate Today</h1>

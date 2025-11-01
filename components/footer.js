@@ -8,6 +8,14 @@ export default function Footer() {
       <div className={styles.innerContainer}>
         <div className={styles.links}>
           <div className={styles.linkContainer}>
+            <Link href="/excavation">Excavation</Link>
+            <div className={styles.linkUnderline}></div>
+          </div>
+          <div className={styles.linkContainer}>
+            <Link href="/masonry">Masonry</Link>
+            <div className={styles.linkUnderline}></div>
+          </div>
+          <div className={styles.linkContainer}>
             <Link href="/our-work">Our Work</Link>
             <div className={styles.linkUnderline}></div>
           </div>

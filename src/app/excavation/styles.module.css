@@ -5,7 +5,7 @@
   --black: #000000;
   --off-white: #f5f5f5;
   --off-black: #1c1c1c;
-  --azul: #074257;
+  --azul: #04222d;
 }
 
 .outerContainer {
@@ -48,6 +48,9 @@
   font-size: 60px;
   letter-spacing: 1.5px;
   padding-left: 20px;
+}
+.slimHero img {
+  object-fit: cover;
 }
 .innerContainerB {
   width: 100%;
@@ -209,8 +212,8 @@
 /* 1040px or less */
 @media screen and (width <= 1040px) {
   .slimHero {
-    width: 100%;
-    border-radius: 0;
+    width: 90%;
+    border-radius: 10px;
   }
   .slimHero img {
     object-fit: cover;
@@ -307,32 +310,54 @@
 
 /* 495px or less */
 @media screen and (width <= 490px) {
+  .slimHero {
+    width: 90%;
+    height: 30rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
   .slimHero p {
-    font-size: 30px;
+    font-size: 65px;
+    padding-left: 0;
   }
   .innerContainerB .twoColumn {
     width: 100%;
   }
   .innerContainerB .columnText {
-    width: 100%;
+    width: 18rem;
     justify-content: center;
     align-items: center;
-    display: flex;
-    flex-direction: column;
+    display: block;
+  }
+  .innerContainerB .columnText h1 {
+    font-size: 32px;
+    text-align: left;
   }
   .innerContainerB .columnText p {
-    font-size: 13px;
-    width: 80%;
+    font-size: 15px;
+    text-align: left;
   }
   .innerContainerC .columnText {
-    width: 100%;
+    width: 18rem;
     justify-content: center;
     align-items: center;
-    display: flex;
-    flex-direction: column;
+    display: block;
   }
   .innerContainerC .columnText p {
     font-size: 13px;
-    width: 80%;
+    width: 100%;
+    text-align: left;
+  }
+  .innerContainerC .columnText h1 {
+    text-align: left;
+  }
+  .innerContainerC .ctaContainer {
+    justify-content: left;
+  }
+  .innerContainerD {
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }

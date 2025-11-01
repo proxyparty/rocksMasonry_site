@@ -3,7 +3,7 @@
   --black: #000000;
   --off-white: #f5f5f5;
   --off-black: #1c1c1c;
-  --azul: #074257;
+  --azul: #04222d;
 }
 
 .outerContainer {
@@ -78,7 +78,7 @@
   padding-top: 45px;
 }
 .countyContainer h1 {
-  color: var(--off-black);
+  color: var(--azul);
   font-family: var(--font-staatliches);
   font-weight: 400;
   font-size: 40px;
@@ -151,11 +151,13 @@
   }
   .countyContainer .countyImage {
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
-  .countyImage img {
-    position: relative;
-    width: 60%;
-    height: auto;
+  .countyContainer .countyImage img {
+    position: relative !important;
+    width: 80% !important;
+    height: auto !important;
   }
   .countyText h1 {
     font-size: 30px;
@@ -174,12 +176,31 @@
     width: 100%;
     text-align: center;
   }
+  .titleContainer h1 {
+    width: 80%;
+  }
+  .badge2Col {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .badge2Col .badgeImage {
+    margin-right: 20px;
+  }
+  .badge2Col .badgeText {
+    text-align: left;
+  }
+  .badge2Col .badgeText p,
+  .badge2Col .badgeText h2 {
+    width: 225px;
+  }
   .countyContainer {
     width: 100%;
+    flex-direction: column-reverse;
   }
   .countyText {
     text-align: center;
-    width: 100%;
+    width: 80%;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -187,6 +208,9 @@
   }
   .countyText h1 {
     font-size: 25px;
+  }
+  .countyText {
+    padding-top: 0;
   }
   .countyText p {
     width: 90%;

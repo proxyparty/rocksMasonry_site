@@ -10,7 +10,7 @@ export default function Estimate() {
           <Image src="/estimate_image.png" alt="logo" layout="fill" />
         </div>
         <div className={styles.columnText}>
-          <h1>Get Your Estimate Today</h1>
+          <h1>Get Your Free Estimate Today</h1>
           <p>
             Whether you’re planning a pool demolition, backyard transformation,
             foundation excavation, or land clearing project, Rocks Masonry and

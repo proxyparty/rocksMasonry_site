@@ -3,7 +3,6 @@
   padding: 10px 0;
   display: flex;
   justify-content: center;
-  z-index: 3;
   position: relative;
 }
 .twoColumn {
@@ -117,6 +116,9 @@
   padding-left: 100px;
   padding-top: 100px;
 }
+.burgerOn .linkContainer a:hover {
+  color: #4a8841;
+}
 .burgerOn img {
   padding-bottom: 10px;
 }
@@ -203,5 +205,9 @@
     width: 30px;
     background-color: #1c1c1c;
     border-radius: 5px;
+  }
+  .crossburgerContainer {
+    top: 35px;
+    left: 100px;
   }
 }
