@@ -27,7 +27,7 @@ const staatliches = Staatliches({
 });
 
 export const metadata = {
-  title: "Rocks Masonry",
+  title: "Rocks Masonry & Excavation",
   description:
     "The most reliable excavation and demolition company in Suffolk and Nassau County, NY",
 };
