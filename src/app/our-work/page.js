@@ -1,10 +1,36 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../our-work/styles.module.css";
+import modalstyles from "./modal.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faX } from "@fortawesome/free-solid-svg-icons";
+import React, { useState } from "react";
 
 export default function OurWork() {
+  const [isActive, setIsActive] = useState(false);
+  const modalClass = isActive
+    ? `${modalstyles["modalOn"]} ${modalstyles.modalDisplay}`
+    : modalstyles.modalDisplay;
   return (
     <>
+      <div className={modalClass}>
+        <div className={modalstyles.modal_overlay} />
+        <div className={modalstyles.modal_outerContainer}>
+          <div className={modalstyles.modal_innerContainer}>
+            <div className={modalstyles.modal_iconContainer}>
+              <FontAwesomeIcon
+                icon={faX}
+                style={{ color: "#1c1c1c" }}
+              ></FontAwesomeIcon>
+            </div>
+            <div className={modalstyles.modal_imgContainer}>
+              <Image src="/3d_gallery5_image.png" alt="logo" layout="fill" />
+            </div>
+          </div>
+        </div>
+      </div>
       <div className={styles.outerContainer}>
         <div className={styles.innerContainerA}>
           <div className={styles.slimHero}>
@@ -16,7 +42,10 @@ export default function OurWork() {
         <div className={styles.innerContainerC}>
           <h2 className={styles.sectionTitle}>Gallery</h2>
           <div className={styles.galleryContainer}>
-            <div className={styles.galleryImage}>
+            <div
+              className={styles.galleryImage}
+              onClick={() => setIsActive(!isActive)}
+            >
               <Image src="/work_gallery1_image.png" alt="logo" layout="fill" />
             </div>
             <div className={styles.galleryImage}>
