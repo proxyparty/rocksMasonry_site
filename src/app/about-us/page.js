@@ -1,10 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../about-us/styles.module.css";
+import Header from "../../../components/header";
+import Footer from "../../../components/footer";
 
 export default function AboutUs() {
   return (
     <>
+      <Header />
       <div className={styles.container}>
         <div className={styles.innerContainerA}>
           <div className={styles.slimHero}>
@@ -69,6 +72,7 @@ export default function AboutUs() {
           </Link>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

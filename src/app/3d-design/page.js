@@ -1,10 +1,71 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../3d-design/styles.module.css";
+import modalstyles from "../../../components/css/modal.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faX } from "@fortawesome/free-solid-svg-icons";
+import React, { useState, useEffect } from "react";
+import Header from "../../../components/header";
+import Footer from "../../../components/footer";
 
 export default function ThreeD() {
+  const [isActive, setIsActive] = useState(false);
+  const modalClass = isActive
+    ? `${modalstyles["modalOn"]} ${modalstyles.modalDisplay}`
+    : modalstyles.modalDisplay;
+
+  const handleChildElementClick = (e) => {
+    e.stopPropagation();
+    // Do other stuff here
+  };
+
+  const [images, setImages] = useState([]);
+  const [selectedImage, setSelectedImage] = useState(null);
+  useEffect(() => {
+    // Fetch images from your JSON file
+    async function fetchImages() {
+      const res = await fetch("http://localhost:3500/3DGallery");
+      const data = await res.json();
+      setImages(data);
+    }
+    fetchImages();
+  }, []);
+  const fetchModal = (clickedImg) => {
+    setSelectedImage(clickedImg);
+    setIsActive(!isActive);
+  };
   return (
     <>
+      {selectedImage && (
+        <div className={modalClass}>
+          <div className={modalstyles.modal_overlay} />
+          <div
+            className={modalstyles.modal_outerContainer}
+            onClick={() => setIsActive(!isActive)}
+          >
+            <div
+              className={modalstyles.modal_innerContainer}
+              onClick={(e) => handleChildElementClick(e)}
+            >
+              <div
+                className={modalstyles.modal_iconContainer}
+                onClick={() => setIsActive(!isActive)}
+              >
+                <FontAwesomeIcon
+                  icon={faX}
+                  style={{ color: "#1c1c1c" }}
+                ></FontAwesomeIcon>
+              </div>
+              <div className={modalstyles.modal_imgContainer}>
+                <Image src={selectedImage.path} alt="logo" layout="fill" />
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+      <Header />
       <div className={styles.outerContainer}>
         <div className={styles.innerContainerA}>
           <div className={styles.slimHero}>
@@ -33,7 +94,16 @@ export default function ThreeD() {
         </div>
         <div className={styles.innerContainerC}>
           <div className={styles.galleryContainer}>
-            <div className={styles.galleryImage}>
+            {images.map((image) => (
+              <div
+                className={styles.galleryImage}
+                key={image.id}
+                onClick={() => fetchModal(image)}
+              >
+                <Image src={image.path} alt={image.title} layout="fill" />
+              </div>
+            ))}
+            {/* <div className={styles.galleryImage}>
               <Image src="/3d_gallery1_image.png" alt="logo" layout="fill" />
             </div>
             <div className={styles.galleryImage}>
@@ -50,7 +120,7 @@ export default function ThreeD() {
             </div>
             <div className={styles.galleryImage}>
               <Image src="/3d_gallery6_image.png" alt="logo" layout="fill" />
-            </div>
+            </div> */}
           </div>
         </div>
         <div className={styles.innerContainerD}>
@@ -62,6 +132,7 @@ export default function ThreeD() {
           </Link>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

@@ -9,14 +9,12 @@ import Experience from "../../components/experience";
 import LearnMore from "../../components/learnmore";
 import ChooseUs from "../../components/chooseus";
 import Estimate from "../../components/estimate";
-// import { Modal } from "../../components/modal";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
 
 export default function Home() {
   return (
     <>
-      {/* <Modal /> */}
       <Header />
       <Hero />
       <Experience />

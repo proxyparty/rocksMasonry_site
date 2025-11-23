@@ -33,9 +33,9 @@
   cursor: pointer;
 }
 .modal_innerContainer {
-  height: 595px;
-  width: 600px;
   background-color: var(--off-white);
+  height: 80vh;
+  width: 80vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,7 +47,6 @@
 .modal_iconContainer {
   height: 30px;
   width: 30px;
-  border: var(--off-black) solid 2px;
   position: absolute;
   top: 2%;
   right: 2%;
@@ -56,19 +55,20 @@
   align-items: center;
   border-radius: 10px;
   cursor: pointer;
-  background-color: var(--off-black);
+  transition: all ease-in-out 0.2s;
 }
 
 .modal_iconContainer:hover {
-  background-color: var(--off-white);
+  background-color: var(--off-black);
+  border: var(--off-black) solid 2px;
 }
 
 .modal_iconContainer:hover > svg > path {
-  color: var(--off-black);
+  color: var(--off-white);
 }
 
 .modal_iconContainer > svg > path {
-  color: var(--off-white);
+  color: var(--off-black);
 }
 
 .modal_imgContainer {
@@ -79,4 +79,7 @@
 }
 .modal_imgContainer img {
   object-fit: contain;
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;
 }
