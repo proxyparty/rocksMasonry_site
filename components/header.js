@@ -5,6 +5,7 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./css/header.module.css";
+import contactstyles from "./css/contact.module.css";
 import React, { useState } from "react";
 
 export default function Header() {
@@ -12,8 +13,82 @@ export default function Header() {
   const hamburgerClass = isActive
     ? `${styles["burgerOn"]} ${styles.hamburgerMenu}`
     : styles.hamburgerMenu;
+
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // Logic to send email will go here (e.g., calling an API route)
+    console.log("Name:", name);
+    console.log("Phone:", phone);
+    console.log("Email to send:", email);
+    console.log("Message:", message);
+    // You would typically send this data to a server-side API route
+  };
   return (
     <>
+      <div className={contactstyles.container}>
+        <div className={contactstyles.content}>
+          <h1>Let’s build something great!</h1>
+          <p>
+            Contact our team to answer any questions you may have and claim your
+            free quote!
+          </p>
+          <form onSubmit={handleSubmit}>
+            <div className={contactstyles.formItem}>
+              {/* <label htmlFor="name">Name:</label> */}
+              <input
+                type="text"
+                id={contactstyles.name}
+                placeholder="Full Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
+            </div>
+            <div className={contactstyles.formItem}>
+              {/* <label htmlFor="phone">Phone:</label> */}
+              <input
+                type="tel"
+                id="phone"
+                placeholder="Contact Number"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                required
+              />
+            </div>
+            <div className={contactstyles.formItem}>
+              {/* <label htmlFor="email">Email:</label> */}
+              <input
+                type="email"
+                id="email"
+                placeholder="Email Address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
+            <div className={contactstyles.formItem}>
+              {/* <label htmlFor="message">Message:</label> */}
+              <textarea
+                id="message"
+                placeholder="Comments"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                required
+              ></textarea>
+            </div>
+            <div className={contactstyles.formItem}>
+              <button className={contactstyles.btn} type="submit">
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
       <div className={styles.container}>
         <div
           className={`${styles.twoColumn}`}

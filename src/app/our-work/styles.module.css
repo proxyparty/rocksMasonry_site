@@ -124,6 +124,7 @@
   position: relative;
   overflow: hidden;
   border-radius: 25px;
+  cursor: pointer;
 }
 .galleryImage img {
   object-fit: cover;
