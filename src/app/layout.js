@@ -7,11 +7,6 @@ config.autoAddCss = false;
 
 import "./globals.css";
 
-// const geistSans = Geist({
-//   variable: "--font-roboto",
-//   subsets: ["latin"],
-// });
-
 const roboto = Roboto({
   weight: "400",
   variable: "--font-roboto",

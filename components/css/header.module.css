@@ -60,6 +60,7 @@
   background-color: #4a8841;
   border: solid 2px #4a8841;
   color: #ffffff;
+  cursor: pointer;
 }
 .btn:hover {
   background-color: #ffffff;

@@ -1,7 +1,7 @@
 "use client";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown, faX } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./css/header.module.css";
@@ -13,6 +13,29 @@ export default function Header() {
   const hamburgerClass = isActive
     ? `${styles["burgerOn"]} ${styles.hamburgerMenu}`
     : styles.hamburgerMenu;
+
+  const [formActive, setFormActive] = useState(false);
+  const formClass = formActive
+    ? `${contactstyles["formActive"]} ${contactstyles.formDisplay}`
+    : contactstyles.formDisplay;
+
+  const [formHidden, setFormHidden] = useState(false);
+  const submittedClass = formHidden
+    ? `${contactstyles["submitted"]} ${contactstyles.form}`
+    : contactstyles.form;
+  const [titleContent, setTitleContent] = useState(
+    "Let’s build something great!"
+  );
+  const [subtitleContent, setSubtitleContent] = useState(
+    "Contact our team to answer any questions you may have and claim your free quote!"
+  );
+  const formSubmitted = () => {
+    setTitleContent("We look forward to speaking with you");
+    setSubtitleContent(
+      "We've received your request and will reach back out to you shortly!"
+    );
+    setFormHidden(!formHidden);
+  };
 
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -30,63 +53,77 @@ export default function Header() {
   };
   return (
     <>
-      <div className={contactstyles.container}>
-        <div className={contactstyles.content}>
-          <h1>Let’s build something great!</h1>
-          <p>
-            Contact our team to answer any questions you may have and claim your
-            free quote!
-          </p>
-          <form onSubmit={handleSubmit}>
-            <div className={contactstyles.formItem}>
-              {/* <label htmlFor="name">Name:</label> */}
-              <input
-                type="text"
-                id={contactstyles.name}
-                placeholder="Full Name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
-              />
-            </div>
-            <div className={contactstyles.formItem}>
-              {/* <label htmlFor="phone">Phone:</label> */}
-              <input
-                type="tel"
-                id="phone"
-                placeholder="Contact Number"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                required
-              />
-            </div>
-            <div className={contactstyles.formItem}>
-              {/* <label htmlFor="email">Email:</label> */}
-              <input
-                type="email"
-                id="email"
-                placeholder="Email Address"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-            </div>
-            <div className={contactstyles.formItem}>
-              {/* <label htmlFor="message">Message:</label> */}
-              <textarea
-                id="message"
-                placeholder="Comments"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                required
-              ></textarea>
-            </div>
-            <div className={contactstyles.formItem}>
-              <button className={contactstyles.btn} type="submit">
-                Send Message
-              </button>
-            </div>
-          </form>
+      <div className={formClass}>
+        <div
+          className={contactstyles.overlay}
+          onClick={() => setFormActive(!formActive)}
+        />
+        <div className={contactstyles.icon}>
+          <FontAwesomeIcon
+            icon={faX}
+            style={{ color: "#1c1c1c" }}
+            onClick={() => setFormActive(!formActive)}
+          ></FontAwesomeIcon>
+        </div>
+        <div className={contactstyles.formContainer}>
+          <div className={contactstyles.content}>
+            <p className={contactstyles.title}>{titleContent}</p>
+            <p className={contactstyles.subtitle}>{subtitleContent}</p>
+            <form onSubmit={handleSubmit} className={submittedClass}>
+              <div className={contactstyles.formItem}>
+                {/* <label htmlFor="name">Name:</label> */}
+                <input
+                  type="text"
+                  id={contactstyles.name}
+                  placeholder="Full Name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                />
+              </div>
+              <div className={contactstyles.formItem}>
+                {/* <label htmlFor="phone">Phone:</label> */}
+                <input
+                  type="tel"
+                  id="phone"
+                  placeholder="Contact Number"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  required
+                />
+              </div>
+              <div className={contactstyles.formItem}>
+                {/* <label htmlFor="email">Email:</label> */}
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Email Address"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+              </div>
+              <div className={contactstyles.formItem}>
+                {/* <label htmlFor="message">Message:</label> */}
+                <textarea
+                  id={contactstyles.message}
+                  placeholder="Comments"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  required
+                ></textarea>
+              </div>
+              <div className={contactstyles.formItem}>
+                <button
+                  onClick={formSubmitted}
+                  className={contactstyles.btn}
+                  type="submit"
+                >
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
       <div className={styles.container}>
@@ -129,12 +166,12 @@ export default function Header() {
               <Link href="/about-us">About Us</Link>
               <div className={styles.linkUnderline}></div>
             </div>
-            <Link
+            <div
               className={styles.btn}
-              href="https://share.google/VJ6kUpzMYIBS92DVg"
+              onClick={() => setFormActive(!formActive)}
             >
               Contact Us
-            </Link>
+            </div>
           </div>
           <div
             onClick={() => setIsActive(!isActive)}
