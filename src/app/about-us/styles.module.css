@@ -126,6 +126,7 @@
   border: solid 2px var(--green);
   transition: all ease-in-out 0.25s;
   font-size: 20px;
+  color: var(--off-white);
 }
 .innerContainerF .btn:hover {
   background-color: #ffffff;
