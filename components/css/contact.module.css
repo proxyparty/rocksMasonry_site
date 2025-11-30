@@ -64,7 +64,7 @@
   font-weight: 400;
   line-height: 28px;
 }
-.formContainer form.submitted {
+.formContainer .form.submitted {
   display: none;
 }
 .formContainer .formItem > input {
