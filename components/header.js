@@ -7,6 +7,10 @@ import Link from "next/link";
 import styles from "./css/header.module.css";
 import contactstyles from "./css/contact.module.css";
 import React, { useState } from "react";
+// import SendEmail from "../src/app/api/send-email/route";
+// import dotenv from "dotenv";
+// import nodemailer from "nodemailer";
+// dotenv.config({ path: "./.env" });
 
 export default function Header() {
   const [isActive, setIsActive] = useState(false);
@@ -41,6 +45,29 @@ export default function Header() {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+
+  // const transporter = nodemailer.createTransport({
+  //   service: "gmail",
+  //   auth: {
+  //     user: process.env.GMAIL_USER,
+  //     pass: process.env.GMAIL_PASS,
+  //   },
+  // });
+
+  // const mailOptions = {
+  //   from: process.env.GMAIL_USER,
+  //   to: process.env.GMAIL_USER,
+  //   subject: "Testing 12 12",
+  //   text: "Yeo",
+  // };
+
+  // transporter.sendMail(mailOptions, (error, info) => {
+  //   if (error) {
+  //     console.error("error", error);
+  //   } else {
+  //     console.log("Email sent", info.response);
+  //   }
+  // });
 
   const handleSubmit = async (e) => {
     e.preventDefault();

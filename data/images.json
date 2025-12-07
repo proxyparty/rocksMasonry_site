@@ -1,49 +1,19 @@
 {
   "ourWorkGallery": [
     {
-      "id": 1,
-      "title": "Gallery Image 1",
-      "path": "http://localhost:3500/work_gallery1_image.png"
+      "id": 10,
+      "title": "Gallery Image 10",
+      "path": "https://i.ibb.co/kg69jWqN/DSCF2373.jpg"
     },
     {
-      "id": 2,
-      "title": "Gallery Image 2",
-      "path": "http://localhost:3500/work_gallery2_image.png"
+      "id": 11,
+      "title": "Gallery Image 11",
+      "path": "https://i.ibb.co/CpdyZwPZ/DSCF2435.jpg"
     },
     {
-      "id": 3,
-      "title": "Gallery Image 3",
-      "path": "http://localhost:3500/work_gallery3_image.png"
-    },
-    {
-      "id": 4,
-      "title": "Gallery Image 4",
-      "path": "http://localhost:3500/work_gallery4_image.png"
-    },
-    {
-      "id": 5,
-      "title": "Gallery Image 5",
-      "path": "http://localhost:3500/work_gallery5_image.png"
-    },
-    {
-      "id": 6,
-      "title": "Gallery Image 6",
-      "path": "http://localhost:3500/work_gallery6_image.png"
-    },
-    {
-      "id": 7,
-      "title": "Gallery Image 7",
-      "path": "http://localhost:3500/work_gallery7_image.png"
-    },
-    {
-      "id": 8,
-      "title": "Gallery Image 8",
-      "path": "http://localhost:3500/work_gallery8_image.png"
-    },
-    {
-      "id": 9,
-      "title": "Gallery Image 9",
-      "path": "http://localhost:3500/work_gallery9_image.png"
+      "id": 12,
+      "title": "Gallery Image 12",
+      "path": "https://i.ibb.co/Xf9d4cPG/DSCF2390.jpg"
     }
   ],
   "3DGallery": [

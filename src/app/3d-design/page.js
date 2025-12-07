@@ -26,7 +26,7 @@ export default function ThreeD() {
   useEffect(() => {
     // Fetch images from your JSON file
     async function fetchImages() {
-      const res = await fetch("http://localhost:3500/3DGallery");
+      const res = await fetch("http://localhost:3000/api/3d-gallery");
       const data = await res.json();
       setImages(data);
     }
@@ -59,7 +59,11 @@ export default function ThreeD() {
                 ></FontAwesomeIcon>
               </div>
               <div className={modalstyles.modal_imgContainer}>
-                <Image src={selectedImage.path} alt="logo" layout="fill" />
+                <Image
+                  src={selectedImage.secure_url}
+                  alt={selectedImage.display_name}
+                  layout="fill"
+                />
               </div>
             </div>
           </div>
@@ -97,10 +101,14 @@ export default function ThreeD() {
             {images.map((image) => (
               <div
                 className={styles.galleryImage}
-                key={image.id}
+                key={image.public_id}
                 onClick={() => fetchModal(image)}
               >
-                <Image src={image.path} alt={image.title} layout="fill" />
+                <Image
+                  src={image.secure_url}
+                  alt={image.display_name}
+                  layout="fill"
+                />
               </div>
             ))}
             {/* <div className={styles.galleryImage}>

@@ -25,8 +25,18 @@ export default function OurWork() {
   const [selectedImage, setSelectedImage] = useState(null);
   useEffect(() => {
     // Fetch images from your JSON file
+    // async function fetchImages() {
+    //   const res = await fetch("http://localhost:3000/api/gallery");
+    //   const data = await res.json();
+    //   setImages(data);
+    // }
+    // fetchImages();
+
     async function fetchImages() {
-      const res = await fetch("http://localhost:3500/ourWorkGallery");
+      const res = await fetch("http://localhost:3000/api/ourwork-gallery"); // Adjust URL
+      if (!res.ok) {
+        throw new Error("Failed to fetch images");
+      }
       const data = await res.json();
       setImages(data);
     }
@@ -49,17 +59,21 @@ export default function OurWork() {
               className={modalstyles.modal_innerContainer}
               onClick={(e) => handleChildElementClick(e)}
             >
-              <div
-                className={modalstyles.modal_iconContainer}
-                onClick={() => setIsActive(!isActive)}
-              >
-                <FontAwesomeIcon
-                  icon={faX}
-                  style={{ color: "#1c1c1c" }}
-                ></FontAwesomeIcon>
-              </div>
               <div className={modalstyles.modal_imgContainer}>
-                <Image src={selectedImage.path} alt="logo" layout="fill" />
+                <div
+                  className={modalstyles.modal_iconContainer}
+                  onClick={() => setIsActive(!isActive)}
+                >
+                  <FontAwesomeIcon
+                    icon={faX}
+                    style={{ color: "#1c1c1c" }}
+                  ></FontAwesomeIcon>
+                </div>
+                <Image
+                  src={selectedImage.secure_url}
+                  alt={selectedImage.display_name}
+                  layout="fill"
+                />
               </div>
             </div>
           </div>
@@ -80,10 +94,14 @@ export default function OurWork() {
             {images.map((image) => (
               <div
                 className={styles.galleryImage}
-                key={image.id}
+                key={image.public_id}
                 onClick={() => fetchModal(image)}
               >
-                <Image src={image.path} alt={image.title} layout="fill" />
+                <Image
+                  src={image.secure_url}
+                  alt={image.display_name}
+                  layout="fill"
+                />
               </div>
             ))}
             {/* <div className={styles.galleryImage} onClick={fetchModal}>
