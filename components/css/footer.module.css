@@ -14,8 +14,9 @@
   flex-direction: row;
   justify-content: space-evenly;
   padding: 40px 0 20px 0;
-  font-size: 16px;
-  width: 35rem;
+  font-size: 19px;
+  width: 40rem;
+  color: var(--off-white);
 }
 .doubleColumn {
   display: flex;
@@ -37,6 +38,7 @@
   font-size: 40px;
   margin-left: 40px;
   width: 37rem;
+  color: var(--off-white);
 }
 .linkContainer a {
   transition: all ease-in-out 0.2s;

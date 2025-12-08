@@ -63,6 +63,7 @@
   font-family: var(--font-staatliches);
   font-weight: 400;
   padding-right: 10px;
+  color: var(--off-white);
 }
 .itemTitleWrap img {
   height: 30px !important;
