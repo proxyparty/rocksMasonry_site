@@ -28,7 +28,7 @@ export default function ThreeD() {
   useEffect(() => {
     // Fetch images from your JSON file
     async function fetchImages() {
-      const res = await fetch("https://rocksmasonry.com/api/3d-gallery");
+      const res = await fetch("http://localhost:3000/api/3d-gallery");
       const data = await res.json();
       setImages(data);
     }
