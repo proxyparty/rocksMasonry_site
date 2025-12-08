@@ -9,6 +9,8 @@ import { faX } from "@fortawesome/free-solid-svg-icons";
 import React, { useState, useEffect } from "react";
 import Header from "../../../components/header";
 import Footer from "../../../components/footer";
+// import dotenv from "dotenv";
+// dotenv.config({ path: "../.env" });
 
 export default function ThreeD() {
   const [isActive, setIsActive] = useState(false);
@@ -26,7 +28,7 @@ export default function ThreeD() {
   useEffect(() => {
     // Fetch images from your JSON file
     async function fetchImages() {
-      const res = await fetch("http://localhost:3000/api/3d-gallery");
+      const res = await fetch("https://rocksmasonry.com/api/3d-gallery");
       const data = await res.json();
       setImages(data);
     }

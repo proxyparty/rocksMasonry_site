@@ -9,6 +9,8 @@ import { faX } from "@fortawesome/free-solid-svg-icons";
 import React, { useState, useEffect } from "react";
 import Header from "../../../components/header";
 import Footer from "../../../components/footer";
+// import dotenv from "dotenv";
+// dotenv.config({ path: "./.env" });
 
 export default function OurWork() {
   const [isActive, setIsActive] = useState(false);
@@ -33,7 +35,7 @@ export default function OurWork() {
     // fetchImages();
 
     async function fetchImages() {
-      const res = await fetch("http://localhost:3000/api/ourwork-gallery"); // Adjust URL
+      const res = await fetch("https://rocksmasonry.com/api/ourwork-gallery"); // Adjust URL
       if (!res.ok) {
         throw new Error("Failed to fetch images");
       }
