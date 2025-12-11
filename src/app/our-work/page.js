@@ -35,7 +35,7 @@ export default function OurWork() {
     // fetchImages();
 
     async function fetchImages() {
-      const res = await fetch("https://rocksmasonry.com/api/ourwork-gallery"); // Adjust URL
+      const res = await fetch("/api/ourwork-gallery"); // Adjust URL
       if (!res.ok) {
         throw new Error("Failed to fetch images");
       }
