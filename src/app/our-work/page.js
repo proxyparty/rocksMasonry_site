@@ -39,8 +39,8 @@ export default function OurWork() {
       if (!res.ok) {
         throw new Error("Failed to fetch images");
       }
-      const data = await res.json();
-      setImages(data);
+      const obj = await res.json();
+      setImages(obj.dataset);
     }
     fetchImages();
   }, []);

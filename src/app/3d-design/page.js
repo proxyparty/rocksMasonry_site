@@ -29,9 +29,8 @@ export default function ThreeD() {
     // Fetch images from your JSON file
     async function fetchImages() {
       const res = await fetch("/api/3d-gallery");
-      const data = await res.json();
-      console.log(data);
-      setImages(data);
+      const obj = await res.json();
+      setImages(obj.dataset);
     }
     fetchImages();
   }, []);
