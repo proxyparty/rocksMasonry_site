@@ -1,3 +1,5 @@
+// route 3d gallery
+
 import { v2 as cloudinary } from "cloudinary";
 import { NextResponse } from "next/server";
 import dotenv from "dotenv";
