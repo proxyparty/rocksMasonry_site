@@ -3,6 +3,9 @@ import { NextResponse } from "next/server";
 import dotenv from "dotenv";
 dotenv.config({ path: "./.env" });
 
+const ALLOWED_ORIGIN =
+  process.env.NODE_ENV === "production" ? "https://rocksmasonry.com" : "*";
+
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
   api_key: process.env.CLOUDINARY_API_KEY,
@@ -25,7 +28,10 @@ export async function GET() {
       // Add other relevant properties you need
     }));
 
-    return NextResponse.json(images);
+    return NextResponse.json({
+      headers: { "Access-Control-Allow-Origin": ALLOWED_ORIGIN },
+      dataset: images,
+    });
   } catch (error) {
     console.error("Error fetching Cloudinary images:", error);
     return NextResponse.json(

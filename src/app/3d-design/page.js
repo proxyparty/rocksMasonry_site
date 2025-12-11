@@ -30,6 +30,7 @@ export default function ThreeD() {
     async function fetchImages() {
       const res = await fetch("https://rocksmasonry.com/api/3d-gallery");
       const data = await res.json();
+      console.log(data);
       setImages(data);
     }
     fetchImages();
